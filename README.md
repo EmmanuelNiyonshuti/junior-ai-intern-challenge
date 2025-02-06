@@ -1,0 +1,1 @@
+# JUNIOR_Al_Developer_Intern challenge
