@@ -22,8 +22,7 @@ const ChatInterface = () => {
     setChatHistory([...chatHistory, { sender: "user", message: prompt }])
 
     try {
-      const API_URL = import.meta.env.API_BASE_URL;
-      const res = await fetch(`${API_URL}/api/chat`, {
+      const res = await fetch('https://ai-chatbot-backend-evct.onrender.com/api/chat', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
