@@ -46,15 +46,20 @@ frontend/
 
 # Setup Guide
 ```sh
+# clone the repository
+git clone git@github.com:EmmanuelNiyonshuti/junior-ai-intern-challenge.git
+
+#navigate to frontend directory
 cd frontend
 # Install dependencies
 npm install
 
 #Start the development server
 npm run dev
-
-The frontend will be available at http://localhost:3000 #default Vite port is 5173, but this project is configured to use 3000 in vite.config.js
 ```
+Interact with the UI of the AI Chatbot application below. The frontend is live and ready for use at [http://localhost:3000](http://localhost:3000) (configured port).
+
+![UI](https://res.cloudinary.com/dx8m9dy9d/image/upload/v1739017642/gemini_chatbot_npenzm.png)
 
 # Deployment
 - Hosted on Vercel: [Chatbot Web URL](https://chatbot-web-five.vercel.app)

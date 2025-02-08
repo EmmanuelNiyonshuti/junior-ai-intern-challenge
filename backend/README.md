@@ -36,9 +36,11 @@ backend/
 ```
 
 # Setup Guide
-## **1. Install Dependencies**
 
 ```bash
+# clone the repository
+git clone git@github.com:EmmanuelNiyonshuti/junior-ai-intern-challenge.git
+
  #Navigate to the backend directory
  cd backend
 
@@ -50,7 +52,8 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## **2. Set Up Environment Variables**
+**Set Up Environment Variables**:
+
 Create a **.env** file in the backend/ directory and add:
 ```bash
 GEMINI_API_KEY=your_google_gemini_api_key
@@ -60,7 +63,6 @@ GEMINI_API_KEY=your_google_gemini_api_key
 python3 run.py
 ```
 The API will be available at http://localhost:5000
-
 
 # API Endpoints
 ### **1 Generate AI Response**

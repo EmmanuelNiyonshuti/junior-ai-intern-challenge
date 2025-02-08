@@ -34,6 +34,9 @@ It consists of:
 
 ## **1. Backend Setup**
 ```sh
+# clone the repository
+git clone git@github.com:EmmanuelNiyonshuti/junior-ai-intern-challenge.git
+
 # Navigate to the backend directory
 cd backend
 
@@ -49,19 +52,42 @@ pip install -r requirements.txt
 python3 run.py
 
 The API will be available at http://localhost:5000.
-
 ```
+# API Endpoints
+ - Generate AI Response
+    - **URL:** `/api/chat`
+    - **Method:** `POST`
+    - **Request Body:**
+  ```json
+  {
+    "prompt": "Hello, how are you?"
+  }
+  ```
+  - Response
+    ```json
+    {
+      "msg": "I'm an AI chatbot! How can I assist you today?"
+    }
+    ```
+
+- Error Handling
+    - If prompt is missing → returns 400 Bad Request
+    - If API key is incorrect → returns 500 Internal Server Error
+
 ## **2. Frontend Setup**
 ```sh
+# Navigate to the backend directory
 cd frontend
+
 # Install dependencies
 npm install
 
 #Start the development server
 npm run dev
-
-The frontend will be available at http://localhost:3000 #default Vite port is 5173, but this project is configured to use 3000 in vite.config.js
 ```
+Interact with the UI of the AI Chatbot application below. The frontend is live and ready for use at [http://localhost:3000](http://localhost:3000) (configured port).
+
+![UI](https://res.cloudinary.com/dx8m9dy9d/image/upload/v1739017642/gemini_chatbot_npenzm.png)
 
 ### Deployment Links
 - Backend (Render): [API URL](https://ai-chatbot-backend-evct.onrender.com)
