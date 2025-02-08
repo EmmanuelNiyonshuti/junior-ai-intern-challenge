@@ -25,7 +25,9 @@ def create_app():
         app,
         resources={
             r"/*": {
-                "origins": "*"
+                "origins": "https://chatbot-web-five.vercel.app",
+                "methods": ["POST", "OPTIONS"],
+                "allow_headers": ["Content-Type"],
             }
         },
     )
