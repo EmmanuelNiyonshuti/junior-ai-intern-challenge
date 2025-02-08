@@ -9,7 +9,6 @@ export default defineConfig({
     proxy: {
       '/api':{
         target: 'https://ai-chatbot-backend-evct.onrender.com',
-        changeOrigin: true
       }
     }
   }
