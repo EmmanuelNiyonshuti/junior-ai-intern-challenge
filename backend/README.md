@@ -3,13 +3,25 @@
 This is the backend service for the AI Chatbot, built using **Flask**.  
 It processes user input and interacts with [Google Gemini API](https://ai.google.dev/gemini-api) to generate responses.
 
-## Features
+
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Setup Guide](#setup-guide)
+   - [Install Dependencies](##1-install-dependencies)
+   - [Set Up Environment Variables](##2-set-up-environment-variables)
+   - [Run the Server](##3-run-the-server)
+- [API Endpoints](#api-endpoints)
+- [Generate AI Response](#generate-ai-response)
+- [Deployment](#deployment)
+- [Author](#author)
+
+# Features
 - Flask-based REST API
 - AI-powered chatbot using [Google Gemini API](https://ai.google.dev/gemini-api)
 - Supports **POST** requests to generate AI responses
 - Deployed on **Render**
 
-## Project Structure
+# Project Structure
 ```
 backend/
     ├── app/                   # Application package
@@ -23,8 +35,8 @@ backend/
     └── README.md # Backend documentation
 ```
 
-## Setup Guide
-#### **1. Install Dependencies**
+# Setup Guide
+## **1. Install Dependencies**
 
 ```bash
  #Navigate to the backend directory
@@ -38,7 +50,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-#### **2. Set Up Environment Variables**
+## **2. Set Up Environment Variables**
 Create a **.env** file in the backend/ directory and add:
 ```bash
 GEMINI_API_KEY=your_google_gemini_api_key
@@ -50,7 +62,7 @@ python3 run.py
 The API will be available at http://localhost:5000
 
 
-## API Endpoints
+# API Endpoints
 ### **1 Generate AI Response**
 - **URL:** `/api/chat`
 - **Method:** `POST`
@@ -66,16 +78,16 @@ The API will be available at http://localhost:5000
     }
 ```
 
-##### Error Handling:
+### **2. Error Handling**
 - If prompt is missing → returns 400 Bad Request
 - If API key is incorrect → returns 500 Internal Server Error
 
-### Deployment
+# Deployment
 The backend is deployed on Render.
 You can access it here:
 - [API URL](https://ai-chatbot-backend-evct.onrender.com)
 
-### Author
+# Author
 - Names: NIYONSHUTI Emmanuel
 - [Twitter(X)](https://x.com/NIYONSH77028058)
 - [LinkedIn](https://www.linkedin.com/in/niyonshuti-emmanuel-82877b285/)

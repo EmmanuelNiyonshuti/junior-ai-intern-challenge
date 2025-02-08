@@ -1,26 +1,38 @@
 # AI Chatbot
 
-This project is an AI chatbot that interacts with users using [Google Gemini API](https://ai.google.dev/gemini-api/docs).  
+This project is an AI chatbot that interacts with users using [Google Gemini API](https://ai.google.dev/gemini-api).  
 It consists of:
 - **Backend**: A Flask API that processes user input and returns responses from Gemini AI.
 - **Frontend**: A React (Vite) web app that interacts with the backend API.
 
-## Features
+## Table of Contents
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Setup Guide](#setup-guide)
+  - [Backend Setup](##1-backend-setup)
+  - [Frontend Setup](##2-frontend-setup)
+- [Deployment Links](#deployment-links)
+- [Author](#author)
+
+# Features
 - AI-powered chatbot responses using Google Gemini API
 - REST API backend using Flask
 - Frontend built with React & Vite with tailwindcss
 - Deployed backend on Render
 - Deployed frontend on Vercel
 
-## Project Structure
+# Project Structure
+```
 ├── backend/        # Backend API using Flask
-├── frontend/       # Frontend web app using React & Vite
-├── README.md       # Project overview
 
+├── frontend/       # Frontend web app using React & Vite
+
+├── README.md       # Project overview
+```
 
 ## Setup Guide
 
-### **1. Backend Setup**
+## **1. Backend Setup**
 ```sh
 # Navigate to the backend directory
 cd backend
@@ -39,7 +51,7 @@ python3 run.py
 The API will be available at http://localhost:5000.
 
 ```
-### **2. Frontend Setup**
+## **2. Frontend Setup**
 ```sh
 cd frontend
 # Install dependencies
@@ -51,10 +63,10 @@ npm run dev
 The frontend will be available at http://localhost:3000 #default Vite port is 5173, but this project is configured to use 3000 in vite.config.js
 ```
 
-## Deployment Links
+### Deployment Links
 - Backend (Render): [API URL](https://ai-chatbot-backend-evct.onrender.com)
 
-- Frontend (Vercel): [Web App URL](https://chatbot-web-five.vercel.app/)
+- Frontend (Vercel): [Web App URL](https://chatbot-web-five.vercel.app)
 
 ### Author
 - Names: NIYONSHUTI Emmanuel
