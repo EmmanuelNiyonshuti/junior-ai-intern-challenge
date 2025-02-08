@@ -19,7 +19,7 @@ def create_app():
         app (Flask): The configured Flask application object.
     """
     app = Flask(__name__)
-    cors.init_app(app, resources={r"/*": {"origins": "*"}}) # request to all routes from all origins. to be changed in production
+    cors.init_app(app, resources={r"/*": {"origins": "chatbot-web-five.vercel.app"}})
     app.register_blueprint(app_views)
 
     return app
