@@ -22,7 +22,8 @@ const ChatInterface = () => {
     setChatHistory([...chatHistory, { sender: "user", message: prompt }])
 
     try {
-      const res = await fetch("/api/chat", {
+      const API_URL = import.meta.env.API_BASE_URL;
+      const res = await fetch(`${API_URL}/api/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
