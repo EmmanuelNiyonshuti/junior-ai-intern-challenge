@@ -7,11 +7,7 @@ It processes user input and interacts with [Google Gemini API](https://ai.google
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Setup Guide](#setup-guide)
-   - [Install Dependencies](##1-install-dependencies)
-   - [Set Up Environment Variables](##2-set-up-environment-variables)
-   - [Run the Server](##3-run-the-server)
 - [API Endpoints](#api-endpoints)
-- [Generate AI Response](#generate-ai-response)
 - [Deployment](#deployment)
 - [Author](#author)
 
@@ -44,9 +40,14 @@ git clone git@github.com:EmmanuelNiyonshuti/junior-ai-intern-challenge.git
  #Navigate to the backend directory
  cd backend
 
-# (Optional) Create and activate a virtual environment to avoid dependency conflicts
+# (Optional) Create  a virtual environment to avoid dependency conflicts
 python -m venv .venv  
+
+# Activate Virtual environment
+source .venv/bin/activate # on linux or macos
+
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
 
 # Install dependencies
 pip install -r requirements.txt
@@ -65,24 +66,24 @@ python3 run.py
 The API will be available at http://localhost:5000
 
 # API Endpoints
-### **1 Generate AI Response**
-- **URL:** `/api/chat`
-- **Method:** `POST`
-- **Request Body:**
+ - **URL:** `/api/chat`
+  - **Method:** `POST`
+    - **Request Body:**
   ```json
   {
     "prompt": "Hello, how are you?"
   }
-- **Response**
-```json
+  ```
+  - Response
+    ```json
     {
       "msg": "I'm an AI chatbot! How can I assist you today?"
     }
-```
+    ```
 
-### **2. Error Handling**
-- If prompt is missing → returns 400 Bad Request
-- If API key is incorrect → returns 500 Internal Server Error
+- Error Handling
+    - If prompt is missing → returns 400 Bad Request
+    - If API key is incorrect → returns 500 Internal Server Error
 
 # Deployment
 The backend is deployed on Render.

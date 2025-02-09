@@ -40,23 +40,33 @@ git clone git@github.com:EmmanuelNiyonshuti/junior-ai-intern-challenge.git
 # Navigate to the backend directory
 cd backend
 
-# (Optional) Create and activate a virtual environment to avoid dependency conflicts
-python -m venv .venv
+# (Optional) Create virtual environment to avoid dependency conflicts
+python3 -m venv .venv
+
+# Activate Virtual environment
+source .venv/bin/activate # on linux or macos
 
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Start the Flask server
-python3 run.py
-
-The API will be available at http://localhost:5000.
 ```
+**Set Up Environment Variables**:
+
+Create a **.env** file in the backend/ directory and add:
+```bash
+GEMINI_API_KEY=your_google_gemini_api_key
+```
+#### **3. Run the Server**
+```bash
+python3 run.py
+```
+
+The API will be available at http://localhost:5000
+
 # API Endpoints
- - Generate AI Response
-    - **URL:** `/api/chat`
-    - **Method:** `POST`
+ - **URL:** `/api/chat`
+  - **Method:** `POST`
     - **Request Body:**
   ```json
   {
