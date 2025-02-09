@@ -33,4 +33,5 @@ def chat():
     res = model.generate_content(prompt)
     return jsonify({
         'msg': res.text
-    }), 201
+    }), 200
+
